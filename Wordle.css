@@ -31,18 +31,37 @@ hr{
 
     /*Text Css */
     color:black;
-    font-size: 6px;
+    font-size: 20px;
     font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
+.correct{
+    background-color: #3fc031;
+    color: white;
+    border-color: white;
+}
+.present{
+    background-color: #f5ce23;
+    color: white;
+    border-color: white;
+}
+.absent{
+    background-color: #787C7E;
+    color: white;
+    border-color: white;
+}
+
+
+
 .keyboard-row{
     width: 400px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    
 }
 .key-tile{
     width: 36px;
