@@ -1,7 +1,6 @@
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
-    background-color: #D9DBFA;
     background-image: linear-gradient(135deg, #d9dbfa 25%, transparent 25%), linear-gradient(225deg, #d9dbfa 25%, transparent 25%), linear-gradient(45deg, #d9dbfa 25%, transparent 25%), linear-gradient(315deg, #d9dbfa 25%, #e5e5f7 25%);
     background-position: 0px 0, 0px 0, 0 0, 0 0;
 }
@@ -71,7 +70,6 @@ hr {
     height: 40px;
     margin: 1px;
     border: 1px solid black;
-    background-color: #FFF7F7;
     border-radius: 5px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
