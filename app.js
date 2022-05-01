@@ -6,26 +6,11 @@ var column = 0;
 
 var gameOver = false;
 //hard coded word list
-var wordList = ["pears",
-    "jello",
-    "bagel",
-    "river",
-    "hyped",
-    "cargo",
-    "river",
-    "mango",
-    "apple"
+var wordList = [
+    "piano", "shelf", "lodge", "suing", "rearm", "coral", "ramen", "worth", "psalm",
 ];
 var guessList = [
-    "pears",
-    "jello",
-    "bagel",
-    "river",
-    "hyped",
-    "cargo",
-    "river",
-    "mango",
-    "apple",
+    "piano", "shelf", "lodge", "suing", "rearm", "coral", "ramen", "worth", "psalm",
 ];
 
 guessList = guessList.concat(wordList);
@@ -128,8 +113,8 @@ function processInput(e) {
     if (!gameOver && row == height) {
         gameOver = true;
         document.getElementById("answer").innerText = word;
-        document.getElementById("answer").innerText = "GameOver!   " + "\n" + "The answer was " + word;
-
+        document.getElementById("answer").innerText =
+            "GameOver!   " + "\n" + "The answer was " + word;
     }
 }
 
@@ -150,7 +135,8 @@ function update() {
     console.log(guess);
 
     if (!guessList.includes(guess)) {
-        document.getElementById("answer").innerText = "Not in the word list" + "\n" + "Please try again";
+        document.getElementById("answer").innerText =
+            "Not in the word list" + "\n" + "Please try again";
         return;
     }
 
@@ -170,7 +156,7 @@ function update() {
 
     console.log(letterCount);
 
-    //first iteration, check all the correct letters 
+    //first iteration, check all the correct letters
     for (let c = 0; c < width; c++) {
         let currentTile = document.getElementById(
             row.toString() + "-" + c.toString()
