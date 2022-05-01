@@ -38,26 +38,36 @@ hr{
     align-items: center;
 
 }
-#keyboard-cont {
-    margin: 2px;
+.keyboard-row{
+    width: 400px;
+    margin: 0 auto;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+}
+.key-tile{
+    width: 36px;
+    height: 40px;
+    margin:1px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+    display:flex;
+    justify-content: center;
     align-items: center;
-  }
-  
-  #keyboard-cont div {
+}
+.enter-key-tile{
+    width: 76px;
+    height: 40px;
+    margin: 1px;
+    border: 1px solid black;
+    border-radius: 5px;
+
+    font-size: 20px;
+    font-weight: bold;
     display: flex;
-  }
-  
-  .second-row {
-    margin: 5px;
-  }
-  /*keyboard Button */
-  .kb {
-    font-size: 16px;
-    font-weight: 700;
-    padding: 10px;
-    margin: 0 2px;
-    cursor: pointer;
-    text-transform: uppercase;
-  }
+    justify-content: center;
+    align-items: center;
+
+}
