@@ -4,4 +4,7 @@ PHP UNIT TESTING:
 -xml setup 
 
     TO TEST:
-    run 'vendor/bin/phpunit' in terminal 
+    -run 'vendor/bin/phpunit' in terminal 
+
+COMPOSER:
+-to run composer 'php composer.phar' 
