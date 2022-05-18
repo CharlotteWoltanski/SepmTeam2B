@@ -46,6 +46,11 @@ hr {
     border-color: white;
 }
 
+#answer {
+    color: #FF4500;
+    font-size: 30px;
+}
+
 .partialcorrect {
     background-color: #f5ce23;
     color: white;
