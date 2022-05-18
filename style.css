@@ -50,6 +50,11 @@ hr {
     
 }
 
+#answer {
+    color: #FF4500;
+    font-size: 30px;
+}
+
 .partialcorrect {
     background-color: #fdf0bd;
     color: black;
