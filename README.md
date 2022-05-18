@@ -7,4 +7,4 @@ PHP UNIT TESTING:
     -run 'vendor/bin/phpunit' in terminal 
 
 COMPOSER:
--to run composer 'php composer.phar' 
+    -to run composer 'php composer.phar' 
