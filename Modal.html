@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<!-- This is the code ive modified from w3 schools modal, not sure where to put it yet :)-->
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .statistics-content {
+            text-align: center;
+            background-color: white;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        h4 {
+            font-size: 20px;
+        }
+        
+        table {
+            margin-left: 25px;
+        }
+        
+        td,
+        th {
+            text-align: center;
+            padding: 8px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Modal Example</h2>
+
+    <button id="Stat">Statistics</button>
+
+    <div id="myModal" class="modal">
+
+        <div class="statistics-content">
+            <span class="close">&times;</span>
+            <h4>Statistics</h4>
+            <table>
+                <tr>
+                    <td id="plays"></td>
+                    <td id="wins"> %</td>
+                    <td id="current"></td>
+                    <td id="max"></td>
+                    <td id="timer"></td>
+                </tr>
+                <tr>
+                    <tr>
+                        <th>Played</th>
+                        <th>Wins</th>
+                        <th>Current Streak</th>
+                        <th>Max Streak </th>
+                        <th>Count Down Timer </th>
+                    </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <script>
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("Stat");
+        var span = document.getElementsByClassName("close")[0];
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
