@@ -1,3 +1,18 @@
+<?php
+//    unset($_COOKIE['statistics']);
+    if(!isset($_COOKIE['statistics'])) {
+        $json = '
+        {
+            "stat_played": "0",
+            "stat_win": "0",
+            "stat_curr_streak": "0",
+            "stat_max_streak": "0"
+        }';
+        setcookie('statistics', $json);
+    }
+
+?>
+<html>
 <head>
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
