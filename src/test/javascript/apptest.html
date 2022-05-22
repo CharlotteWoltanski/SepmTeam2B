@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Jasmine Test</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.6.1/jasmine.min.css">
+  </head>
+  <body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.6.1/jasmine.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.6.1/jasmine-html.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.6.1/boot.min.js"></script>
+  </body>
+</html>
+
+<script>
+// check if user entry guess is in the guess list 
+describe("user_entry_guess_validation_true", function() {
+  var guess;
+
+  beforeEach(function() {
+    guess = {
+        word1 : 'piano',
+        word2: 'shelf',
+        word3 : 'lodge',
+        word4 : 'coral'
+    };
+  });
+  it("user guess = 'piano'; expected result = true", function() {
+    expect(guess).toEqual(jasmine.objectContaining({
+        word1 : 'piano'
+    }));
+   
+  });
+});
+
+describe("user_entry_guess_validation_false", function() {
+  var guess;
+
+  beforeEach(function() {
+    guess = {
+        word1 : 'piano',
+        word2: 'shelf',
+        word3 : 'lodge',
+        word4 : 'coral'
+    };
+  });
+  it("user guess = 'bagel'; expected result = false", function() {
+    expect(guess).not.toEqual(jasmine.objectContaining({
+        word1 : 'bagel'
+    }));
+   
+  });
+});
+
+// check if letter position validation is correct
+describe("user_entry_guess_letter_validation_true", function() {
+    var correctLetterPosition = {
+        position1 : 'c',
+        position2 : 'o',
+        position3 : 'r',
+        position4 : 'a',
+        position5 : 'l'
+    };
+
+    var userLetterPosition = {
+        // incorrect letter
+        position1 : 'b',
+        // incorrect letter 
+        position2 : 'a',
+        // correct letter 
+        position3 : 'r',
+        // incorrect letter
+        position4 : 'e',
+        // correct letter
+        position5 : 'l'
+    };
+
+  it("user guess = 'barel'; correct word = 'coral'. user guess letter position3 and position5 is correct; expected result = true", function() {
+    expect(correctLetterPosition.position3).toEqual(userLetterPosition.position3);
+    expect(correctLetterPosition.position5).toEqual(userLetterPosition.position5);
+  });
+});
+
+describe("user_entry_guess_letter_validation_false", function() {
+    var correctLetterPosition = {
+        position1 : 'c',
+        position2 : 'o',
+        position3 : 'r',
+        position4 : 'a',
+        position5 : 'l'
+    };
+
+    var userLetterPosition = {
+        // incorrect letter
+        position1 : 'b',
+        // incorrect letter 
+        position2 : 'a',
+        // correct letter 
+        position3 : 'r',
+        // incorrect letter
+        position4 : 'e',
+        // correct letter
+        position5 : 'l'
+    };
+
+  it("user guess = 'barel'; correct word = 'coral'. user guess letter position1, position2 and position4 is incorrect; expected result = false", function() {
+    expect(correctLetterPosition.position1).not.toEqual(userLetterPosition.position1);
+    expect(correctLetterPosition.position2).not.toEqual(userLetterPosition.position2);
+    expect(correctLetterPosition.position4).not.toEqual(userLetterPosition.position4);
+  });
+});
+
+// check if user guess contains letter; but not correct position
+describe("user_entry_guess_incorrect_position_validation_true", function () {
+    var correctLetterPosition = {
+        position1 : 'c',
+        position2 : 'o',
+        position3 : 'r',
+        position4 : 'a',
+        position5 : 'l'
+    };
+
+    var userLetterPosition = ['o','p','a','l','s'];
+
+  it("correct word = 'coral', user entry = 'opals'. checking letters exist in user entry against position2,4 and 5; expected result = true", function () {
+    expect(userLetterPosition).toContain(correctLetterPosition.position2);
+    expect(userLetterPosition).toContain(correctLetterPosition.position4);
+    expect(userLetterPosition).toContain(correctLetterPosition.position5);
+  });
+});
+
+// number of letters entered in user guess 
+describe("user_entry_guess_number_of_letters_true", function () {
+    var userEntry = 'piano';
+
+  it("user entry = 'piano', length = 5; expected result = true", function () {
+        expect(userEntry.length).toBe(5); 
+  });
+});
+
+describe("user_entry_guess_number_of_letters_false", function () {
+    var userEntry = 'hi';
+
+  it("user entry = 'hi', length =2; expected result = false", function () {
+        expect(userEntry.length).not.toBe(5); 
+  });
+});
+
+
+</script>
