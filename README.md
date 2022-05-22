@@ -9,4 +9,4 @@ PHP UNIT TESTING:
 
 
 JAVASCRIPT UNIT TESTING: 
--JEST 
+    -Jasmine web runner
