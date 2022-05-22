@@ -1,12 +1,10 @@
-PHP UNIT TESTING: 
--downloaded composer 
--composer setup 
--xml setup 
-    TO TEST:
-    -run 'vendor/bin/phpunit' in terminal 
-    COMPOSER:
-    -to run composer 'php composer.phar' 
+Team 2B Wordle Project Sprint 1 & 2
 
-
-JAVASCRIPT UNIT TESTING: 
-    -Jasmine web runner
+    Contribution:
+        -Simon
+        -Christopher
+        -Kelly
+        -Kiel
+        -James
+        -Charlotte 
+    
